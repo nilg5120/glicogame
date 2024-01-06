@@ -53,9 +53,11 @@ function resetScore() {
 
 function setGoal() {
     goalScore = parseInt(document.getElementById('Goal').value);
+    //通常表示
     if (isNaN(goalScore)) {
         alert('有効な数値を入力してください。');
         return;
     }
     document.getElementById("goalDisplay").textContent = `目標歩数: ${goalScore}`;
 }
+
