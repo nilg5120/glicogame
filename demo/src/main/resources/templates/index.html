@@ -6,12 +6,16 @@
 </head>
 <body>
     <h1>グリコゲーム</h1>
+    <p>ゴールまでの歩数:</p>
+    <input type="number" id="Goal" onchange="setGoal()">
+    <p id ="goalDisplay"></p>
     <button onclick="userChoice('グー')">グー</button>
     <button onclick="userChoice('チョキ')">チョキ</button>
     <button onclick="userChoice('パー')">パー</button>
     <p id="result"></p> <!-- 勝ち負けの結果表示 -->
     <p id="score"></p> <!-- 何歩進んだか？ -->
     <button onclick="resetScore()">リセット</button>
+
     <script src="glicogame.js"></script>
 </body>
 </html>

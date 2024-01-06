@@ -50,3 +50,12 @@ function resetScore() {
     document.getElementById("result").textContent = "";
     document.getElementById("result").style.color = "black";
 }
+
+function setGoal() {
+    goalScore = parseInt(document.getElementById('Goal').value);
+    if (isNaN(goalScore)) {
+        alert('有効な数値を入力してください。');
+        return;
+    }
+    document.getElementById("goalDisplay").textContent = `目標歩数: ${goalScore}`;
+}
