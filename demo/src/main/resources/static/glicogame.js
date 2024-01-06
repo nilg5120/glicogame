@@ -9,6 +9,7 @@ function userChoice(userHand) {
 
     if (userHand === computerHand) {
         result = "引き分けです。";
+        document.getElementById("result").style.color = "black";
     } else if ((userHand === "グー" && computerHand === "チョキ") ||
                (userHand === "チョキ" && computerHand === "パー") ||
                (userHand === "パー" && computerHand === "グー")) {
@@ -40,4 +41,12 @@ function userChoice(userHand) {
 
 function updateScore() {
     document.getElementById("score").textContent = "スコア: あなた " + userScore + " - コンピュータ " + computerScore;
+}
+
+function resetScore() {
+    userScore = 0;
+    computerScore = 0;
+    updateScore();
+    document.getElementById("result").textContent = "";
+    document.getElementById("result").style.color = "black";
 }
