@@ -37,6 +37,7 @@ function userChoice(userHand) {
 
     document.getElementById("result").textContent = "あなたは " + userHand + " を出しました。コンピュータは " + computerHand + " を出しました。" + result;
     updateScore();
+    checkGoal();
 }
 
 function updateScore() {
@@ -58,6 +59,15 @@ function setGoal() {
         alert('有効な数値を入力してください。');
         return;
     }
+    console.log(goalScore);
     document.getElementById("goalDisplay").textContent = `目標歩数: ${goalScore}`;
 }
 
+function checkGoal() {
+    if (userScore >= goalScore) {
+        alert('おめでとうございます！目標歩数を達成しました！');
+    }
+    if (computerScore >= goalScore) {
+        alert('残念！コンピュータの勝ちです！');
+    }
+}
